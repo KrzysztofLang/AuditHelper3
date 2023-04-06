@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditHelper3", "AuditHelper3.csproj", "{231E6545-306C-4F45-94B0-0AF203916FCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{231E6545-306C-4F45-94B0-0AF203916FCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{231E6545-306C-4F45-94B0-0AF203916FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{231E6545-306C-4F45-94B0-0AF203916FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{231E6545-306C-4F45-94B0-0AF203916FCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1FD3B57-DFC8-48F7-9D56-7EF77771690B}
+	EndGlobalSection
+EndGlobal
