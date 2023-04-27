@@ -23,13 +23,25 @@ namespace AuditHelper3
             InitializeComponent();
         }
 
-        private void StartAudit(object sender, RoutedEventArgs e)
+        private void continueMain_Click(object sender, RoutedEventArgs e)
         {
+            Hide();
+
             if (adminCheck.IsChecked == true)
             {
                 User user = new();
-                MessageBox.Show(user.Password);
+                _ = MessageBox.Show(user.Password);
             }
+
+            if (dataCheck.IsChecked == true)
+            {
+                EnterData enterData = new EnterData();
+                enterData.Show();
+
+            }
+
+            Close();
         }
+
     }
 }

@@ -1,6 +1,5 @@
 using System.DirectoryServices.AccountManagement;
 using System.Security.Cryptography;
-using System.Runtime.InteropServices;
 using System;
 using System.Windows;
 
@@ -10,20 +9,16 @@ namespace AuditHelper3
     {
         // Nazwa użytkownika
         private const string username = "BITAdmin_test";
-        public static string Username => username;
         private const string fullname = "Administrator lokalny BetterIT";
-        public bool userCreated = false;
+        private readonly string? password;
 
-        public string Password { get; } = "";
+        public static string Username => username;
+        public static string Fullname => fullname;
+        public bool UserCreated { get; }
+        public string? Password { get; }
 
         public User()
         {
-            if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            {
-                _ = MessageBox.Show("Aplikacja działa wyłącznie w systemie Windows");
-                return;
-            }
-
             // Tworzenie kontekstu maszyny lokalnej
             PrincipalContext context = new(ContextType.Machine);
 
@@ -36,7 +31,7 @@ namespace AuditHelper3
             }
 
             // Generowanie hasła
-            Password = GenerateRandomPassword;
+            password = GenerateRandomPassword;
 
             // Tworzenie obiektu użytkownika
             UserPrincipal user = new(context)
@@ -45,7 +40,7 @@ namespace AuditHelper3
                 SamAccountName = username,
                 DisplayName = fullname
             };
-            user.SetPassword(Password);
+            user.SetPassword(password);
             user.Enabled = true;
 
             // Zapisanie użytkownika
@@ -67,7 +62,7 @@ namespace AuditHelper3
                 group.Save();
             }
 
-            userCreated = true;
+            UserCreated = true;
         }
 
         private static string GenerateRandomPassword
@@ -93,5 +88,7 @@ namespace AuditHelper3
                 return new string(chars);
             }
         }
+
+
     }
 }

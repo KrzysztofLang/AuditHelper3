@@ -27,7 +27,7 @@
             <CheckBox x:Name="dataCheck" Content="Zebranie danych o urządzeniu" IsChecked="True"/>
         </StackPanel>
         
-        <Button x:Name="continueMain" Content="Kontynuuj" Grid.Row="2" HorizontalContentAlignment="Center" IsDefault="True" Width="58" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Click="StartAudit"/>
+        <Button x:Name="continueMain" Content="Kontynuuj" Grid.Row="2" HorizontalContentAlignment="Center" IsDefault="True" Width="58" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Click="continueMain_Click" />
 
     </Grid>
 </Window>
