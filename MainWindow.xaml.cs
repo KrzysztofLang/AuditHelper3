@@ -12,12 +12,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static Microsoft.ApplicationInsights.MetricDimensionNames.TelemetryContext;
 
 namespace AuditHelper3
 {
     /// Interaction logic for MainWindow.xaml
     public partial class MainWindow : Window
     {
+
+        private EnterData enterData;
+        private bool adminCheckFinished = false;
+        private bool dataCheckFinished = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,14 +37,27 @@ namespace AuditHelper3
             {
                 User user = new();
                 _ = MessageBox.Show(user.Password);
+                adminCheckFinished = true;
             }
 
             if (dataCheck.IsChecked == true)
             {
-                EnterData enterData = new EnterData();
+                enterData = new EnterData();
                 enterData.Show();
-
+                dataCheckFinished = true;
+                _ = MessageBox.Show("Wyświetl hostname przed próbą zapisu: " + enterData.Data.Hostname);
             }
+
+            /*if (adminCheck.IsChecked == true || dataCheck.IsChecked == true)
+            {
+                while (dataCheckFinished == false)
+                {
+                    continue;
+                }
+                
+                _ = MessageBox.Show("Wyświetl hostname przed próbą zapisu: " + enterData.Data.Hostname);
+                //SaveData();
+            }*/
 
             Close();
         }

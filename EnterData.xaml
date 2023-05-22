@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AuditHelper3"
         mc:Ignorable="d"
-        Title="AuditHelper v3" Height="150
-        " Width="350">
-    <Grid Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="115" Width="330">
+        Title="AuditHelper v3" Height="165" Width="350" ResizeMode="NoResize">
+    <Grid Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="130" Width="330">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -18,9 +17,9 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <Label Margin="2,2,2,2" HorizontalContentAlignment="Left" Grid.Row="0" Grid.Column="0"  VerticalContentAlignment="Center" Width="160" Height="25" >Nazwa BetterIT:</Label>
-        <Label Margin="2,2,2,2" HorizontalContentAlignment="Left" Grid.Row="1" Grid.Column="0"  VerticalContentAlignment="Center" Width="160" Height="25" >Użytkownik odpowiedzialny:</Label>
-        <Label Margin="2,2,2,2" HorizontalContentAlignment="Left" Grid.Row="2" Grid.Column="0"  VerticalContentAlignment="Center" Width="160" Height="25" >Uwagi:</Label>
+        <Label Margin="2,2,2,2" HorizontalContentAlignment="Left" Grid.Row="0" Grid.Column="0"  VerticalContentAlignment="Center" Width="160" Height="30" >Nazwa BetterIT:</Label>
+        <Label Margin="2,2,2,2" HorizontalContentAlignment="Left" Grid.Row="1" Grid.Column="0"  VerticalContentAlignment="Center" Width="160" Height="30" >Użytkownik odpowiedzialny:</Label>
+        <Label Margin="2,2,2,2" HorizontalContentAlignment="Left" Grid.Row="2" Grid.Column="0"  VerticalContentAlignment="Center" Width="160" Height="30" >Uwagi:</Label>
         <TextBox x:Name="enterName" Margin="2,4,2,5" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Width="160" Height="20"/>
         <TextBox x:Name="enterUser" Margin="2,5,2,4" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Width="160" Height="20"/>
         <TextBox x:Name="enterNote" Margin="2,4,2,5" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Width="160" Height="20"/>

@@ -20,20 +20,32 @@ namespace AuditHelper3
     /// </summary>
     public partial class EnterData : Window
     {
+        private GetData data;
+        private string test = "penus";
         public EnterData()
         {
             InitializeComponent();
         }
 
+        public string Test { get => test; set => test = value; }
+        internal GetData Data { get => data; set => data = value; }
+
         private void continueData_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            GetData data = new(enterName.Text, enterUser.Text, enterNote.Text);
-            _ = MessageBox.Show(data.Name);
-            
-            
-        }
+            data = new(enterName.Text, enterUser.Text, enterNote.Text);
 
-        
+            _ = MessageBox.Show(data.Name);
+            _ = MessageBox.Show(data.AnyDeskID);
+
+            foreach (var item in data.Shares)
+            {
+                _ = MessageBox.Show("Key: " + item.Key + ", Value: " + item.Value);
+            }
+
+            Close();
+
+            _ = MessageBox.Show("Wyświetl hostname wewnątrz EnterData: " + Data.Hostname);
+        }
     }
 }

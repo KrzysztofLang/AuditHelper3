@@ -22,7 +22,7 @@
         <StackPanel Grid.Row="1" Width="180" Height="80">
             <CheckBox x:Name="anydeskCheck" Content="Instalacja AnyDesk" IsChecked="True"/>
             <CheckBox x:Name="nvisionCheck" Content="Instalacja nVision" IsChecked="True"/>
-            <CheckBox x:Name="auditCheck" Content="Open AudIT" IsChecked="True"/>
+            <CheckBox x:Name="auditCheck" Content="Instalacja Open AudIT" IsChecked="True"/>
             <CheckBox x:Name="adminCheck" Content="Tworzenie konta MHAdmin" IsChecked="True"/>
             <CheckBox x:Name="dataCheck" Content="Zebranie danych o urządzeniu" IsChecked="True"/>
         </StackPanel>
